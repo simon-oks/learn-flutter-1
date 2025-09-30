@@ -45,7 +45,13 @@ class MyHomePage extends StatelessWidget {
         elevation: 8,
         centerTitle: true,
       ),
-      body: FlutterLogo(size: 350),
+      body: FlutterLogo(
+        size: MediaQuery.of(context).size.width / 2,
+        style: FlutterLogoStyle.horizontal,
+        textColor: Colors.red,
+        duration: const Duration(milliseconds: 2000),
+        curve: Curves.bounceInOut,
+      ),
     );
   }
 }
