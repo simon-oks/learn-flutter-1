@@ -54,7 +54,7 @@ class MyHomePage extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
             color: Colors.red,
-            borderRadius: BorderRadius.circular(26),
+            borderRadius: BorderRadius.circular(56),
             boxShadow: [
               BoxShadow(
                 color: Colors.black54,
@@ -62,10 +62,11 @@ class MyHomePage extends StatelessWidget {
                 offset: Offset(2, 2),
               ),
             ],
-            border: Border.all(
-              color: Colors.blue,
-              width: 3,
-              style: BorderStyle.solid,
+            gradient: const LinearGradient(
+              colors: [Colors.black, Colors.black38],
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              stops: [0, 0.7],
             ),
           ),
           child: const Text("Test"),
