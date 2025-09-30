@@ -45,7 +45,17 @@ class MyHomePage extends StatelessWidget {
         elevation: 8,
         centerTitle: true,
       ),
-      body: Center(child: SizedBox(width: 200, height: 300, child: Card())),
+      body: Center(
+        child: Container(
+          color: Colors.blue,
+          height: 128,
+          width: 228,
+          alignment: Alignment.bottomCenter,
+          margin: const EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
+          child: const Text("Test"),
+        ),
+      ),
     );
   }
 }
