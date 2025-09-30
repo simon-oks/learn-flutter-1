@@ -47,12 +47,27 @@ class MyHomePage extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          color: Colors.blue,
           height: 128,
           width: 228,
           alignment: Alignment.bottomCenter,
           margin: const EdgeInsets.all(16),
           padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            color: Colors.red,
+            borderRadius: BorderRadius.circular(26),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black54,
+                blurRadius: 4,
+                offset: Offset(2, 2),
+              ),
+            ],
+            border: Border.all(
+              color: Colors.blue,
+              width: 3,
+              style: BorderStyle.solid,
+            ),
+          ),
           child: const Text("Test"),
         ),
       ),
