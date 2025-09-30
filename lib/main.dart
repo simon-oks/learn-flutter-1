@@ -47,29 +47,18 @@ class MyHomePage extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          height: 128,
-          width: 228,
+          color: Colors.deepOrange,
+          height: MediaQuery.of(context).size.height / 3,
+          width: MediaQuery.of(context).size.width * 0.8,
           alignment: Alignment.bottomCenter,
-          margin: const EdgeInsets.all(16),
-          padding: const EdgeInsets.all(16),
-          decoration: BoxDecoration(
-            color: Colors.red,
-            borderRadius: BorderRadius.circular(56),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black54,
-                blurRadius: 4,
-                offset: Offset(2, 2),
-              ),
-            ],
-            gradient: const LinearGradient(
-              colors: [Colors.black, Colors.black38],
-              begin: Alignment.topRight,
-              end: Alignment.bottomLeft,
-              stops: [0, 0.7],
+          child: Container(
+            color: Colors.deepPurple,
+            margin: const EdgeInsets.fromLTRB(10, 20, 30, 40),
+            child: Padding(
+              padding: const EdgeInsets.all(33),
+              child: Container(color: Colors.lightBlue),
             ),
           ),
-          child: const Text("Test"),
         ),
       ),
     );
