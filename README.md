@@ -1,6 +1,6 @@
 # les_widgets_basiques
 
-Apprendre les widgets basiques
+Apprendre Flutter
 
 ## Getting Started
 
