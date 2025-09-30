@@ -45,9 +45,7 @@ class MyHomePage extends StatelessWidget {
         elevation: 8,
         centerTitle: true,
       ),
-      body: const Center(
-        child: FlutterLogo(size: 128, style: FlutterLogoStyle.stacked),
-      ),
+      body: Center(child: SizedBox(width: 200, height: 300, child: Card())),
     );
   }
 }
