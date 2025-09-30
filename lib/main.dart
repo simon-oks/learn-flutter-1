@@ -56,7 +56,9 @@ class MyHomePage extends StatelessWidget {
             margin: const EdgeInsets.fromLTRB(10, 20, 30, 40),
             child: Padding(
               padding: const EdgeInsets.all(33),
-              child: Container(color: Colors.lightBlue),
+              child: Container(
+                color: Theme.of(context).colorScheme.onPrimaryContainer,
+              ),
             ),
           ),
         ),
