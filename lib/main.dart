@@ -45,21 +45,16 @@ class MyHomePage extends StatelessWidget {
         elevation: 8,
         centerTitle: true,
       ),
-      body: Center(
-        child: Container(
-          color: Colors.deepOrange,
-          height: MediaQuery.of(context).size.height / 3,
-          width: MediaQuery.of(context).size.width * 0.8,
-          alignment: Alignment.bottomCenter,
-          child: Container(
-            color: Colors.deepPurple,
-            margin: const EdgeInsets.fromLTRB(10, 20, 30, 40),
-            child: Padding(
-              padding: const EdgeInsets.all(33),
-              child: Container(
-                color: Theme.of(context).colorScheme.onPrimaryContainer,
-              ),
-            ),
+      body: const Center(
+        child: Text(
+          "Salut les codeurs ! Comment allez-vous aujourd'hui ? Comment se passe votre apprentissage de Flutter ?",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Colors.red,
+            fontSize: 24,
+            fontStyle: FontStyle.italic,
+            fontWeight: FontWeight.bold,
+            fontFamily: '',
           ),
         ),
       ),
