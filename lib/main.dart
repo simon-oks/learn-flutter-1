@@ -45,17 +45,16 @@ class MyHomePage extends StatelessWidget {
         elevation: 8,
         centerTitle: true,
       ),
-      body: const Center(
+      body: Center(
+        // child: Text(
+        //   "Salut les codeurs ! Comment allez-vous aujourd'hui ? Comment se passe votre apprentissage de Flutter ?",
+        //   textAlign: TextAlign.center,
+        //   style: GoogleFonts.laBelleAurore(color: Colors.red, fontSize: 34),
+        // ),
         child: Text(
           "Salut les codeurs ! Comment allez-vous aujourd'hui ? Comment se passe votre apprentissage de Flutter ?",
           textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.red,
-            fontSize: 24,
-            fontStyle: FontStyle.italic,
-            fontWeight: FontWeight.bold,
-            fontFamily: '',
-          ),
+          style: TextStyle(fontFamily: 'coolvetica', fontSize: 34),
         ),
       ),
     );
