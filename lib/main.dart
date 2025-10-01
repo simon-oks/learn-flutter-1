@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(const MyApp(appTitle: "Les widgets basiques"));
@@ -47,21 +47,17 @@ class MyHomePage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: RichText(
-          text: TextSpan(
-            text: "Salut ",
-            style: GoogleFonts.laBelleAurore(color: Colors.red, fontSize: 32),
-            children: <TextSpan>[
-              TextSpan(
-                text: "Les Flutteristes",
-                style: GoogleFonts.aBeeZee(color: Colors.blue),
-              ),
-              TextSpan(
-                text: " !",
-                style: Theme.of(context).textTheme.headlineLarge,
-              ),
-            ],
-          ),
+        child: Icon(
+          FontAwesomeIcons.houseMedical,
+          color: Colors.deepPurple,
+          size: 128,
+          shadows: [
+            BoxShadow(
+              color: Colors.red.shade300,
+              blurRadius: 3,
+              offset: Offset(4, 4),
+            ),
+          ],
         ),
       ),
     );
