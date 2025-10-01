@@ -47,6 +47,8 @@ class MyHomePage extends StatelessWidget {
       ),
       body: Center(
         child: Container(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
           padding: EdgeInsets.all(24),
           decoration: const BoxDecoration(
             gradient: LinearGradient(
@@ -55,11 +57,14 @@ class MyHomePage extends StatelessWidget {
               end: Alignment.bottomCenter,
             ),
           ),
-          child: Image.network(
-            height: MediaQuery.of(context).size.height,
-            "https://codabee.com/assets/logos/Logo%20Codabee%20fond%20blanc.png",
-            fit: BoxFit.contain,
-            alignment: Alignment.center,
+          child: CircleAvatar(
+            radius: 128,
+            backgroundColor: Colors.deepPurpleAccent,
+            backgroundImage: AssetImage("assets/images/android bots.jpg"),
+
+            // Image.network(
+            //   "https://codabee.com/assets/logos/Logo%20Codabee%20fond%20blanc.png",
+            // ),
           ),
         ),
       ),
