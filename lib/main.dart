@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(const MyApp(appTitle: "Les widgets basiques"));
@@ -47,17 +46,13 @@ class MyHomePage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: Icon(
-          FontAwesomeIcons.houseMedical,
-          color: Colors.deepPurple,
-          size: 128,
-          shadows: [
-            BoxShadow(
-              color: Colors.red.shade300,
-              blurRadius: 3,
-              offset: Offset(4, 4),
-            ),
-          ],
+        child: Image.asset(
+          "assets/images/android bots.jpg",
+          width: MediaQuery.of(context).size.width,
+          height: 200,
+          fit: BoxFit.cover,
+          alignment: Alignment.topLeft,
+          repeat: ImageRepeat.repeat,
         ),
       ),
     );
