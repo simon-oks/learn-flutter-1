@@ -46,13 +46,21 @@ class MyHomePage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: Image.asset(
-          "assets/images/android bots.jpg",
-          width: MediaQuery.of(context).size.width,
-          height: 200,
-          fit: BoxFit.cover,
-          alignment: Alignment.topLeft,
-          repeat: ImageRepeat.repeat,
+        child: Container(
+          padding: EdgeInsets.all(24),
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.black, Colors.black54],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+            ),
+          ),
+          child: Image.network(
+            height: MediaQuery.of(context).size.height,
+            "https://codabee.com/assets/logos/Logo%20Codabee%20fond%20blanc.png",
+            fit: BoxFit.contain,
+            alignment: Alignment.center,
+          ),
         ),
       ),
     );
