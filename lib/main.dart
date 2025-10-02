@@ -46,27 +46,24 @@ class MyHomePage extends StatelessWidget {
         elevation: 8,
         centerTitle: true,
       ),
-      body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text("Je suis dans une colonne"),
-            Image.network(
-              "https://codabee.com/assets/logos/Logo%20Codabee%20fond%20blanc.png",
-            ),
-            CircleAvatar(
-              radius: 64,
-              backgroundImage: AssetImage("assets/images/android bots.jpg"),
-            ),
-            Container(
-              color: Colors.red,
-              height: 128,
-              width: MediaQuery.of(context).size.width * 0.7,
-              margin: EdgeInsets.all(12),
-            ),
-          ],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 5),
+        child: Center(
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              CircleAvatar(
+                radius: 34,
+                backgroundImage: AssetImage("assets/images/android bots.jpg"),
+              ),
+              Text(
+                "Je suis dans une Row",
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+              Icon(Icons.send, color: Colors.white),
+            ],
+          ),
         ),
       ),
     );
