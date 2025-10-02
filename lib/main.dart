@@ -46,28 +46,15 @@ class MyHomePage extends StatelessWidget {
         elevation: 8,
         centerTitle: true,
       ),
-      body: Center(
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            Image.asset(
-              "assets/images/sunset.jpg",
-              fit: BoxFit.cover,
-              height: MediaQuery.of(context).size.height,
-            ),
-            Container(
-              margin: EdgeInsets.all(18),
-              alignment: Alignment.center,
-              height: 128,
-              width: MediaQuery.of(context).size.width * 0.8,
-              decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.5),
-                borderRadius: BorderRadius.circular(16),
-              ),
-            ),
-            Text("Apprendre la Stack", style: TextStyle(color: Colors.red)),
-          ],
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text("Salut les codeurs"),
+          Spacer(flex: 3),
+          Container(color: Colors.red, height: 32),
+          Icon(Icons.add_a_photo, color: Colors.orange),
+          Spacer(flex: 1),
+        ],
       ),
     );
   }
