@@ -34,39 +34,31 @@ class MyHomePage extends StatelessWidget {
     // TODO: implement build
     return Scaffold(
       backgroundColor: Colors.blue,
-      appBar: AppBar(
-        title: Text(title),
-        leading: const Icon(Icons.home),
-        actions: [Icon(Icons.person), Icon(Icons.access_time)],
-        bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(24),
-          child: Text("Salut les codeurs"),
-        ),
-        // backgroundColor: Colors.blue,
-        elevation: 8,
-        centerTitle: true,
-      ),
-      body: Column(
-        children: [
-          Container(
-            height: 64,
-            margin: EdgeInsets.all(16),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8),
-              color: Colors.lightGreenAccent,
-            ),
-          ),
-          Expanded(
-            child: Container(
+      body: SafeArea(
+        child: Column(
+          children: [
+            Container(
+              alignment: Alignment.center,
+              height: 64,
+              // margin: EdgeInsets.all(16),
               decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [Colors.blue, Colors.lightGreen],
-                  begin: Alignment.topCenter,
+                borderRadius: BorderRadius.circular(8),
+                color: Colors.lightGreenAccent,
+              ),
+              child: Text("Avons-nous un problème de lectuer ?"),
+            ),
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [Colors.blue, Colors.lightGreen],
+                    begin: Alignment.topCenter,
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
