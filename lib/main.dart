@@ -46,25 +46,61 @@ class MyHomePage extends StatelessWidget {
         elevation: 8,
         centerTitle: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 5),
-        child: Center(
-          child: Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              CircleAvatar(
-                radius: 34,
-                backgroundImage: AssetImage("assets/images/android bots.jpg"),
-              ),
-              Text(
-                "Je suis dans une Row",
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-              Icon(Icons.send, color: Colors.white),
-            ],
-          ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            customRow(
+              title: "Une journée chez Android",
+              asset: "assets/images/android bots.jpg",
+              context: context,
+            ),
+            customRow(
+              title: "Profile 1",
+              asset: "assets/images/profile-1.jpg",
+              context: context,
+            ),
+            customRow(
+              title: "Profile 2",
+              asset: "assets/images/profile-2.jpg",
+              context: context,
+            ),
+            customRow(
+              title: "Profile 3",
+              asset: "assets/images/profile-3.jpg",
+              context: context,
+            ),
+            customRow(
+              title: "Profile 4",
+              asset: "assets/images/profile-4.jpg",
+              context: context,
+            ),
+            customRow(
+              title: "Profile 5",
+              asset: "assets/images/profile-5.jpg",
+              context: context,
+            ),
+          ],
         ),
+      ),
+    );
+  }
+
+  Padding customRow({
+    required String title,
+    required String asset,
+    required BuildContext context,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
+      child: Row(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          CircleAvatar(radius: 34, backgroundImage: AssetImage(asset)),
+          Text(title, style: Theme.of(context).textTheme.titleLarge),
+          Icon(Icons.send, color: Colors.white),
+        ],
       ),
     );
   }
