@@ -33,44 +33,32 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+      appBar: AppBar(),
       backgroundColor: Colors.blue,
-      body: SafeArea(
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            Container(
-              alignment: Alignment.center,
-              height: 64,
-              // margin: EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                color: Colors.lightGreenAccent,
-              ),
-              child: Text("Avons-nous un problème de lectuer ?"),
-            ),
-            Expanded(
-              child: Container(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [Colors.blue, Colors.lightGreen],
-                    begin: Alignment.topCenter,
+            Padding(
+              padding: EdgeInsets.all(8),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: List.generate(
+                    15,
+                    (index) => CircleAvatar(
+                      backgroundColor: Colors.orangeAccent,
+                      child: Text(index.toString()),
+                    ),
                   ),
                 ),
-                child: Wrap(
-                  direction: Axis.horizontal,
-                  crossAxisAlignment: WrapCrossAlignment.end,
-                  alignment: WrapAlignment.start,
-                  children: [
-                    Container(color: Colors.green, height: 54, width: 128),
-                    Container(color: Colors.redAccent, height: 54, width: 228),
-                    Container(color: Colors.orange, height: 54, width: 100),
-                    Container(color: Colors.black54, height: 54, width: 128),
-                    Container(color: Colors.pinkAccent, height: 54, width: 128),
-                    Container(color: Colors.white, height: 54, width: 56),
-                    Expanded(child: Container(color: Colors.lime, height: 54)),
-                  ],
-                ),
               ),
             ),
+            Container(color: Colors.green, height: 54),
+            Container(color: Colors.orange, height: 254),
+            Container(color: Colors.lightGreen, height: 454),
+            Container(color: Colors.red, height: 128),
+            Container(color: Colors.brown, height: 254),
           ],
         ),
       ),
