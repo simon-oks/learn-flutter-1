@@ -33,33 +33,47 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      appBar: AppBar(),
-      backgroundColor: Colors.blue,
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
-          children: [
-            Padding(
-              padding: EdgeInsets.all(8),
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: List.generate(
-                    15,
-                    (index) => CircleAvatar(
-                      backgroundColor: Colors.orangeAccent,
-                      child: Text(index.toString()),
+      backgroundColor: Colors.lightBlueAccent,
+      body: Center(
+        child: Card(
+          clipBehavior: Clip.antiAlias,
+          elevation: 8,
+          margin: EdgeInsets.all(18),
+          color: Colors.lightGreen.shade200,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                "Mon identité",
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+              Divider(
+                thickness: 2,
+                indent: 8,
+                endIndent: 8,
+                color: Colors.lightBlueAccent,
+              ),
+              Row(
+                children: [
+                  CircleAvatar(
+                    radius: 24,
+                    backgroundImage: AssetImage("assets/images/profile-1.jpg"),
+                  ),
+                  Spacer(),
+                  Text(
+                    "Simon OKS",
+                    style: TextStyle(
+                      color: Colors.lightBlue,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
                     ),
                   ),
-                ),
+                ],
               ),
-            ),
-            Container(color: Colors.green, height: 54),
-            Container(color: Colors.orange, height: 254),
-            Container(color: Colors.lightGreen, height: 454),
-            Container(color: Colors.red, height: 128),
-            Container(color: Colors.brown, height: 254),
-          ],
+              SizedBox(height: 16),
+              Image.asset("assets/images/android bots.jpg"),
+            ],
+          ),
         ),
       ),
     );
