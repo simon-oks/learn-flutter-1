@@ -33,6 +33,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+      backgroundColor: Colors.blue,
       appBar: AppBar(
         title: Text(title),
         leading: const Icon(Icons.home),
@@ -46,26 +47,26 @@ class MyHomePage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: Container(
-          height: MediaQuery.of(context).size.height,
-          width: MediaQuery.of(context).size.width,
-          padding: EdgeInsets.all(24),
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Colors.black, Colors.black54],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text("Je suis dans une colonne"),
+            Image.network(
+              "https://codabee.com/assets/logos/Logo%20Codabee%20fond%20blanc.png",
             ),
-          ),
-          child: CircleAvatar(
-            radius: 128,
-            backgroundColor: Colors.deepPurpleAccent,
-            backgroundImage: AssetImage("assets/images/android bots.jpg"),
-
-            // Image.network(
-            //   "https://codabee.com/assets/logos/Logo%20Codabee%20fond%20blanc.png",
-            // ),
-          ),
+            CircleAvatar(
+              radius: 64,
+              backgroundImage: AssetImage("assets/images/android bots.jpg"),
+            ),
+            Container(
+              color: Colors.red,
+              height: 128,
+              width: MediaQuery.of(context).size.width * 0.7,
+              margin: EdgeInsets.all(12),
+            ),
+          ],
         ),
       ),
     );
