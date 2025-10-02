@@ -47,60 +47,27 @@ class MyHomePage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+        child: Stack(
+          alignment: Alignment.center,
           children: [
-            customRow(
-              title: "Une journée chez Android",
-              asset: "assets/images/android bots.jpg",
-              context: context,
+            Image.asset(
+              "assets/images/sunset.jpg",
+              fit: BoxFit.cover,
+              height: MediaQuery.of(context).size.height,
             ),
-            customRow(
-              title: "Profile 1",
-              asset: "assets/images/profile-1.jpg",
-              context: context,
+            Container(
+              margin: EdgeInsets.all(18),
+              alignment: Alignment.center,
+              height: 128,
+              width: MediaQuery.of(context).size.width * 0.8,
+              decoration: BoxDecoration(
+                color: Colors.white.withOpacity(0.5),
+                borderRadius: BorderRadius.circular(16),
+              ),
             ),
-            customRow(
-              title: "Profile 2",
-              asset: "assets/images/profile-2.jpg",
-              context: context,
-            ),
-            customRow(
-              title: "Profile 3",
-              asset: "assets/images/profile-3.jpg",
-              context: context,
-            ),
-            customRow(
-              title: "Profile 4",
-              asset: "assets/images/profile-4.jpg",
-              context: context,
-            ),
-            customRow(
-              title: "Profile 5",
-              asset: "assets/images/profile-5.jpg",
-              context: context,
-            ),
+            Text("Apprendre la Stack", style: TextStyle(color: Colors.red)),
           ],
         ),
-      ),
-    );
-  }
-
-  Padding customRow({
-    required String title,
-    required String asset,
-    required BuildContext context,
-  }) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
-      child: Row(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          CircleAvatar(radius: 34, backgroundImage: AssetImage(asset)),
-          Text(title, style: Theme.of(context).textTheme.titleLarge),
-          Icon(Icons.send, color: Colors.white),
-        ],
       ),
     );
   }
